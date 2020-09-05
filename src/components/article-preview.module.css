@@ -2,6 +2,15 @@
   font-size: 1.5em;
 }
 
+.preview {
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.13);
+  border: 1px solid rgba(0,0,0,0.13);
+}
+
+.previewBody {
+  padding: 1rem;
+}
+
 .tag {
   color: #A0A0A0;
   text-decoration: none;
