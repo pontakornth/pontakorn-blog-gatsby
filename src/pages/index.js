@@ -18,7 +18,7 @@ class RootIndex extends React.Component {
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} >
-            <meta property="og:image" content={coverImage.node.fixed}></meta>
+            <meta property="og:image" content={coverImage.node.fixed.src}></meta>
           </Helmet>
           <Hero data={coverImage} />
           <div className="wrapper">
