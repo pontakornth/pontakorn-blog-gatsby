@@ -17,7 +17,9 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
+          <Helmet title={siteTitle} >
+            <meta property="og:image" content={coverImage.node.fixed}></meta>
+          </Helmet>
           <Hero data={coverImage} />
           <div className="wrapper">
             <h2 className="section-headline">Recent articles</h2>
@@ -54,6 +56,12 @@ export const pageQuery = graphql`
             background: "rgb:000000"
           ) {
             ...GatsbyContentfulFluid_tracedSVG
+          }
+          fixed(
+            width: 1180
+            background: "rgb:000000"
+          ) {
+            src
           }
         }
       }

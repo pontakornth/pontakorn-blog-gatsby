@@ -15,7 +15,9 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location}>
         <main style={{ background: '#fff' }}>
-          <Helmet title={`${post.title} | ${siteTitle}`} />
+          <Helmet title={`${post.title} | ${siteTitle}`} >
+            <meta property="og:image" content={post.heroImage.fixed}></meta>
+          </Helmet>
           <header className={heroStyles.hero}>
             <Img
               className={heroStyles.heroImage}
@@ -59,6 +61,9 @@ export const pageQuery = graphql`
       heroImage {
         fluid(maxWidth: 1180, background: "rgb:000000") {
           ...GatsbyContentfulFluid_tracedSVG
+        }
+        fixed(width: 1180) {
+          src
         }
       }
       body {
