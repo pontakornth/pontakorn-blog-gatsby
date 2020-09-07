@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&family=Kanit:wght@400;600;700&display=swap');
 
 body {
-  font-family: "Bai Jamjuree", Tahoma, Arial, Helvetica, sans-serif;
+  font-family: "Bai Jamjuree", Helvetica, sans-serif;
   font-size: 1em;
   line-height: 1.65;
   color: #373F49;
@@ -19,6 +19,7 @@ h2,
 h3 {
   font-size: 2em;
   font-weight: normal;
+  font-family: "Kanit", Helvetica, sans-serif;
 }
 
 a {
@@ -39,7 +40,7 @@ a {
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(1, minmax(200px, 1fr));
   grid-gap: 5vmin;
 }
 
@@ -65,4 +66,15 @@ a {
 
 .list-inline li {
   display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+  .article-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-gap: 5vmin;
+  }
 }
