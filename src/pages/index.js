@@ -11,12 +11,14 @@ class RootIndex extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
+    const [coverImage] = get(this, 'props.data.allContentfulAsset.edges')
+    console.log(this.props.data)
 
     return (
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
-          <Hero data={author.node} />
+          <Hero data={coverImage} />
           <div className="wrapper">
             <h2 className="section-headline">Recent articles</h2>
             <ul className="article-list">
@@ -39,6 +41,23 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
+    allContentfulAsset(filter: {contentful_id: {eq: "7Ld9w3M1NhuB14o2pKSUfz"}, fluid: {}}) {
+      edges {
+        node {
+          contentful_id
+          description
+          title
+          fluid(
+            maxWidth: 1180
+            maxHeight: 480
+            resizingBehavior: PAD
+            background: "rgb:000000"
+          ) {
+            ...GatsbyContentfulFluid_tracedSVG
+          }
+        }
+      }
+    }
     site {
       siteMetadata {
         title

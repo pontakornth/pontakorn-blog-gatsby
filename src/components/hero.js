@@ -7,8 +7,8 @@ export default ({ data }) => (
   <div className={styles.hero}>
     <Img
       className={styles.heroImage}
-      alt={data.name}
-      fluid={data.heroImage.fluid}
+      alt={data.node.description}
+      fluid={data.node.fluid}
     />
   </div>
 )
