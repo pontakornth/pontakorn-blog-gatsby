@@ -17,7 +17,7 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location}>
         <main style={{ background: '#fff' }}>
           <Helmet title={`${post.title} | ${siteTitle}`} >
-            <meta name="og:image" property="og:image" content={`{siteUrl}{post.heroImage.fixed.src}`}></meta>
+            <meta name="og:image" property="og:image" content={`${siteUrl}${post.heroImage.fixed.src}`}></meta>
           </Helmet>
           <header className={heroStyles.hero}>
             <Img
