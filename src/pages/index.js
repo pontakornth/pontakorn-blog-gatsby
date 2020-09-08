@@ -9,6 +9,7 @@ import ArticlePreview from '../components/article-preview'
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
     const [coverImage] = get(this, 'props.data.allContentfulAsset.edges')
@@ -17,7 +18,7 @@ class RootIndex extends React.Component {
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} >
-            <meta property="og:image" content={coverImage.node.fixed.src}></meta>
+            <meta property="og:image" content={`{siteUrl}{coverImage.node.fixed.src}`}></meta>
           </Helmet>
           <Hero data={coverImage} />
           <div className="wrapper">
@@ -68,6 +69,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
