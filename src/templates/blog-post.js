@@ -11,12 +11,13 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const siteUrl = get(this.props, 'data.site.siteMetadata.siteUrl')
 
     return (
       <Layout location={this.props.location}>
         <main style={{ background: '#fff' }}>
           <Helmet title={`${post.title} | ${siteTitle}`} >
-            <meta name="og:image" property="og:image" content={post.heroImage.fixed.src}></meta>
+            <meta name="og:image" property="og:image" content={`{siteUrl}{post.heroImage.fixed.src}`}></meta>
           </Helmet>
           <header className={heroStyles.hero}>
             <Img
@@ -53,6 +54,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     contentfulBlogPost(slug: { eq: $slug }) {
