@@ -18,7 +18,7 @@ const SEO = (props) => {
             property: 'og:title',
             content: props.title || siteData.site.siteMetadata.title
         },
-        {
+        props.image && {
             property: 'og:image',
             content: `${siteData.site.siteMetadata.siteUrl}${props.image.fixed}`
         },
