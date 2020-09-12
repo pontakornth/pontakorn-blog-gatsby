@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
-import { Helmet } from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
+import SEO from '../components/seo'
 
 class RootIndex extends React.Component {
   render() {
@@ -17,9 +17,7 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} >
-            <meta property="og:image" content={`${siteUrl}${coverImage.node.fixed.src}`}></meta>
-          </Helmet>
+          <SEO title={siteTitle} image={coverImage.node} />
           <Hero data={coverImage} />
           <div className="wrapper">
             <h2 className="section-headline">Recent articles</h2>
