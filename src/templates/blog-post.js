@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
+import SEO from '../components/seo'
 import Layout from '../components/layout'
 
 import heroStyles from '../components/hero.module.css'
@@ -16,9 +17,7 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location}>
         <main style={{ background: '#fff' }}>
-          <Helmet title={`${post.title} | ${siteTitle}`} >
-            <meta name="og:image" property="og:image" content={`${siteUrl}${post.heroImage.fixed.src}`}></meta>
-          </Helmet>
+          <SEO title={post.title} image={post.heroImage} />
           <header className={heroStyles.hero}>
             <Img
               className={heroStyles.heroImage}
