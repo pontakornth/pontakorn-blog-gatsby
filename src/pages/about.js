@@ -4,6 +4,7 @@ import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import styles from './about.module.css'
+import SEO from '../components/seo'
 
 class RootIndex extends React.Component {
   render() {
@@ -13,6 +14,7 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
+        <SEO title={siteTitle} image={author.image} />
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <div className="wrapper">
@@ -48,7 +50,7 @@ export const pageQuery = graphql`
           shortBio {
               shortBio
           }
-          heroImage: image {
+          image: image {
             fluid(
               maxWidth: 1180
               maxHeight: 480
@@ -56,6 +58,12 @@ export const pageQuery = graphql`
               background: "rgb:000000"
             ) {
               ...GatsbyContentfulFluid_tracedSVG
+            }
+            fixed(
+              width: 1180
+              background: "rgb:000000"
+            ) {
+              src
             }
           }
         }
