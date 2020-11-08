@@ -68,6 +68,24 @@ a {
   display: inline-block;
 }
 
+/* TODO: Organize the files */
+.tag {
+  color: #A0A0A0;
+  text-decoration: none;
+  display: inline-block;
+  padding: .33333rem .5rem;
+  line-height: 1;
+  border-radius: 2px;
+  border: 1px solid #A0A0A0;
+  margin-right: .5em;
+}
+
+.tag:hover {
+  background: #667EEA;
+  color: white;
+  border: 1px solid white;
+}
+
 @media screen and (min-width: 768px) {
   .article-list {
     margin: 0;

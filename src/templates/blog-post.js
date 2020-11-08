@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
@@ -13,6 +13,7 @@ class BlogPostTemplate extends React.Component {
     const post = get(this.props, 'data.contentfulBlogPost')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const siteUrl = get(this.props, 'data.site.siteMetadata.siteUrl')
+    const tags = post.tags
 
     return (
       <Layout location={this.props.location}>
@@ -39,6 +40,11 @@ class BlogPostTemplate extends React.Component {
                 __html: post.body.childMarkdownRemark.html,
               }}
             />
+            <ul className={styles.tagList}>
+              {tags.map(tag => (
+                <Link className="tag" to={`/tags/${tag}`} key={tag}>{tag}</Link>
+              ))}
+            </ul>
           </div>
         </main>
       </Layout>
@@ -72,6 +78,7 @@ export const pageQuery = graphql`
           html
         }
       }
+      tags
     }
   }
 `
