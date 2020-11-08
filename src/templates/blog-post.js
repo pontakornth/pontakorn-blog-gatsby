@@ -7,7 +7,7 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 
 import heroStyles from '../components/hero.module.css'
-import styles from '../components/blog-post.module.css'
+import styles from './blog-post.module.css'
 
 class BlogPostTemplate extends React.Component {
   render() {
