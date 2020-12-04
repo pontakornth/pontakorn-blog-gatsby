@@ -1,7 +1,6 @@
 .previewTitle {
-  font-size: 1.5em;
+  @apply font-semibold text-2xl;
   color: #667EEA;
-  font-weight: semi-bold;
 }
 
 .preview {
@@ -10,7 +9,11 @@
 }
 
 .previewBody {
-  padding: 1rem;
+  @apply p-4;
+}
+
+.date, .description {
+  @apply py-4;
 }
 
 .tag {

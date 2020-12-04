@@ -8,13 +8,15 @@ body {
 }
 
 img {
-  @apply block w-full;
+  display: block;
+  width: 100%;
 }
 
 h1,
 h2,
 h3 {
-  @apply text-lg font-semibold;
+  font-size: 2em;
+  font-weight: normal;
   font-family: "Kanit", Helvetica, sans-serif;
 }
 
@@ -24,7 +26,7 @@ a {
 
 .wrapper {
   width: calc(100% - 10vmin);
-  @apply my-0 mx-auto;
+  margin: 0 auto;
   padding: 5vmin 0;
 }
 

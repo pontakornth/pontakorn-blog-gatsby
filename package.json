@@ -7,6 +7,7 @@
     "url": "https://github.com/contentful-userland/gatsby-contentful-starter/issues"
   },
   "dependencies": {
+    "autoprefixer": "^10.0.4",
     "gatsby-image": "^2.3.4",
     "gatsby-plugin-preact": "^4.0.16",
     "gatsby-plugin-react-helmet": "^3.2.4",
@@ -16,6 +17,7 @@
     "gatsby-transformer-remark": "^2.7.3",
     "gatsby-transformer-sharp": "^2.4.6",
     "lodash": "^4.17.15",
+    "postcss": "^8.1.14",
     "preact": "^10.5.5",
     "preact-render-to-string": "^5.1.11",
     "prismjs": "^1.21.0",
@@ -32,7 +34,7 @@
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.19.0",
     "gatsby": "^2.20.25",
-    "gatsby-plugin-postcss": "^2.3.11",
+    "gatsby-plugin-postcss": "^3.3.0",
     "gh-pages": "^2.2.0",
     "inquirer": "^7.1.0",
     "postcss-preset-env": "^6.7.0",
