@@ -26,6 +26,9 @@ a {
   width: calc(100% - 10vmin);
   @apply my-0 mx-auto;
   padding: 5vmin 0;
+           > * {
+             @apply py-4;
+              }
 }
 
 /**
