@@ -9,6 +9,10 @@
   font-size: 2em
 }
 
+.articleBody p {
+  @apply py-4;
+}
+
 .tagList {
   list-style: none;
 }
