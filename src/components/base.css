@@ -26,9 +26,9 @@ a {
   width: calc(100% - 10vmin);
   @apply my-0 mx-auto;
   padding: 5vmin 0;
-           > * {
-             @apply py-4;
-              }
+    > * {
+      @apply py-4;
+      }
 }
 
 /**
@@ -47,6 +47,7 @@ a {
  *
  */
 .section-headline {
+  @apply text-3xl;
   padding: 0 0 0.4em 0;
   margin: 0 0 5vmin 0;
   border-bottom: 1px solid #ddd;
