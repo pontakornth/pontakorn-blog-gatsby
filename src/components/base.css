@@ -54,6 +54,12 @@ a {
 
 }
 
+/* purgecss start ignore */
+.image-description {
+  @apply text-center text-gray-600;
+}
+/* purgecss end ignore */
+
 /**
  *
  */

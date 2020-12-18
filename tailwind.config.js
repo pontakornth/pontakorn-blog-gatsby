@@ -1,9 +1,5 @@
 module.exports = {
-  purge: {
-    options: {
-      safeList: ['text-center', 'text-gray-600']
-    }
-  },
+  purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
