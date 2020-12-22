@@ -13,25 +13,13 @@ const SEO = (props) => {
         }
     }
     `)
-    const metas = [
-        {
-            property: 'og:title',
-            content: props.title || siteData.site.siteMetadata.title
-        },
-        props.image && {
-            property: 'og:image',
-            content: `${siteData.site.siteMetadata.siteUrl}${props.image.fixed}`
-        },
-        {
-            property: 'og:type',
-            content: 'article'
-        }
-    ] 
-    const title = props.title || siteData.site.siteMetadata.title
     return (
         <>
-        <Helmet metas={metas} title={title} />
-        {props.children}
+        <Helmet>
+            <meta property="og:title" content={props.title || siteData.site.siteMetadata.title} />
+            <meta property="og:image" content={`${siteData.site.siteMetadata.siteUrl}${props.image.fixed}`} />
+            <meta property="og:type" content="article" />
+        </Helmet>
         </>
     )
 }
