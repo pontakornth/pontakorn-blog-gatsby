@@ -36,7 +36,7 @@ const SEO = (props) => {
         }
     }
     `)
-    const siteImage =  (props.image.fixed.src || siteData.allContentfulAsset.edge.node.fixed.src)
+    const siteImage = props.image ? props.image.fixed.src : siteData.allContentfulAsset.edge.node.fixed.src
     return (
         <>
         <Helmet>
