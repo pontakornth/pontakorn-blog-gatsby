@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet'
 import styles from '../pages/blog.module.css'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
+import SEO from '../components/seo'
 
 class BlogIndex extends React.Component {
   render() {
@@ -16,7 +17,7 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
+          <SEO />
           <div className={styles.hero}>Tag</div>
           <div className="wrapper">
             <h2 className="section-headline">Recent articles</h2>

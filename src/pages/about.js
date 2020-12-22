@@ -16,7 +16,6 @@ class RootIndex extends React.Component {
       <Layout location={this.props.location}>
         <SEO title={siteTitle} image={author.image} />
         <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
           <div className="wrapper">
             <h2 className="section-headline">About me</h2>
             <h3 className={styles.name}>{author.name}</h3> 
