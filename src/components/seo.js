@@ -31,14 +31,12 @@ const SEO = (props) => {
     const siteImage = () =>  props.image ? props.image.fixed.src : siteData.allContentfulAsset.edges[0].node.fixed.src
     const title = () => props.title || siteData.site.siteMetadata.title
     return (
-        <>
         <Helmet>
             <meta property="og:title" content={title()} />
             <meta property="og:image" content={siteImage()} />
             <meta property="og:type" content="article" />
             <title>{title()}</title>
         </Helmet>
-        </>
     )
 }
 
