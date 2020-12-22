@@ -4,7 +4,6 @@ import SEO from '../components/seo'
 
 const Page404 = () => (
     <Layout>
-        <SEO />
         <main style={{background: '#fff'}}>
             <div class="wrapper">
                 <h1>404 Not Found</h1>
