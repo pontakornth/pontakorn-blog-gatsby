@@ -36,13 +36,15 @@ const SEO = (props) => {
         }
     }
     `)
-    const siteImage = siteData.site.siteMetadata.siteUrl +  (props.image ? props.image.fixed.src : siteData.allContentfulAsset.edge.node.fixed.src)
+    const siteImage =  props.image ? props.image.fixed.src : siteData.allContentfulAsset.edge.node.fixed.src
+    const title = props.title || siteData.site.siteMetadata.title
     return (
         <>
         <Helmet>
-            <meta property="og:title" content={props.title || siteData.site.siteMetadata.title} />
+            <meta property="og:title" content={title} />
             <meta property="og:image" content={siteImage} />
             <meta property="og:type" content="article" />
+            <title>{title}</title>
         </Helmet>
         </>
     )
