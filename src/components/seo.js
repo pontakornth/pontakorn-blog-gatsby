@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby';
 
@@ -8,23 +8,15 @@ const SEO = (props) => {
         allContentfulAsset(filter: {contentful_id: {eq: "7Ld9w3M1NhuB14o2pKSUfz"}, fluid: {}}) {
             edges {
                 node {
-                contentful_id
-                description
-                title
-                fluid(
-                    maxWidth: 1180
-                    maxHeight: 480
-                    resizingBehavior: PAD
-                    background: "rgb:000000"
-                ) {
-                    ...GatsbyContentfulFluid_withWebp
-                }
-                fixed(
-                    width: 1180
-                    background: "rgb:000000"
-                ) {
-                    src
-                }
+                    contentful_id
+                    description
+                    title
+                    fixed(
+                        width: 1180
+                        background: "rgb:000000"
+                    ) {
+                        ...GatsbyContentfulFixed_withWebp
+                    }
                 }
             }
             }
@@ -36,15 +28,15 @@ const SEO = (props) => {
         }
     }
     `)
-    const siteImage =  props.image ? props.image.fixed.src : siteData.allContentfulAsset.edge.node.fixed.src
-    const title = props.title || siteData.site.siteMetadata.title
+    const siteImage = () =>  props.image ? props.image.fixed.src : siteData.allContentfulAsset.edges[0].node.fixed.src
+    const title = () => props.title || siteData.site.siteMetadata.title
     return (
         <>
         <Helmet>
-            <meta property="og:title" content={title} />
-            <meta property="og:image" content={siteImage} />
+            <meta property="og:title" content={title()} />
+            <meta property="og:image" content={siteImage()} />
             <meta property="og:type" content="article" />
-            <title>{title}</title>
+            <title>{title()}</title>
         </Helmet>
         </>
     )
