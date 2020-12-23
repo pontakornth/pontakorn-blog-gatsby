@@ -42,9 +42,15 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
-//    'gatsby-plugin-preact',
+    'gatsby-plugin-preact',
     'gatsby-plugin-sharp',
     'gatsby-plugin-postcss',
+    {
+      resolve: 'gatsby-plugin-purgecss',
+      options: {
+        develop: true,
+      }
+    },
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
