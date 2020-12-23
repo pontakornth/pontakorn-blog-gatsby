@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&family=Kanit:wght@400;600;700&display=swap');
 
+/* purgecss start ignore */
 body {
   @apply bg-gray-200 m-0;
   font-family: "Bai Jamjuree", Helvetica, sans-serif;
@@ -102,3 +103,5 @@ a {
     grid-gap: 5vmin;
   }
 }
+
+/* purgecss end ignore */
