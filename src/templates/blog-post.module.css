@@ -9,8 +9,16 @@
   font-size: 2em
 }
 
-.articleBody p {
-  @apply py-4;
+.articleBody {
+  p, h1, h2, h3, h4, h5, h6 {
+    @apply py-4;
+  }
+  li {
+    @apply py-2 ml-4;
+  }
+  ul {
+    @apply list-disc;
+  }
 }
 
 .tagList {
