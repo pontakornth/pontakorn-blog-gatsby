@@ -20,9 +20,10 @@ class RootIndex extends React.Component {
             <h2 className="section-headline">About me</h2>
             <h3 className={styles.name}>{author.name}</h3> 
             <h3 className={styles.title}>{author.title}</h3>
-            <p>
-              {author.shortBio.shortBio}
-            </p>
+            <div dangerouslySetInnerHTML={{
+              __html:author.childContentfulPersonShortBioTextNode.childMarkdownRemark.html
+            }} className={styles.aboutBody}>
+            </div>
           </div>
         </div>
       </Layout>
@@ -46,9 +47,11 @@ export const pageQuery = graphql`
         node {
           name
           title
-          shortBio {
-              shortBio
-          }
+          childContentfulPersonShortBioTextNode {
+                    childMarkdownRemark {
+                      html
+                  }
+                  }
           image: image {
             fluid(
               maxWidth: 1180

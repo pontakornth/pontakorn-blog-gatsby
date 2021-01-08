@@ -11,3 +11,21 @@
     text-align: center;
     margin-top: 0;
 }
+
+.aboutBody {
+    p, h1, h2, ul {
+        @apply py-4;
+    }
+
+    h1, h2 {
+        @apply text-3xl;
+    }
+
+    ul {
+        @apply list-disc;
+        li {
+            @apply ml-4;
+        }
+    }
+
+}
