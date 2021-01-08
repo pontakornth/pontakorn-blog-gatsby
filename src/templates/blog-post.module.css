@@ -19,6 +19,11 @@
   ul {
     @apply list-disc;
   }
+
+  h1, h2 {
+    @apply text-3xl;
+  }
+  
 }
 
 .tagList {
