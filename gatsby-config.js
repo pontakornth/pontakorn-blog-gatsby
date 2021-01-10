@@ -26,7 +26,7 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: 'Pontakorn Blog',
-    siteUrl: 'https://pontakornth.vercel.app'
+    siteUrl: 'https://pontakornth.dev'
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
