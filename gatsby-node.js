@@ -1,3 +1,4 @@
+const pagination = require('gatsby-awesome-pagination');
 const Promise = require('bluebird')
 const path = require('path')
 
@@ -29,7 +30,17 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
+
+
+
         const posts = result.data.allContentfulBlogPost.edges
+        pagination.paginate({
+          createPage,
+          items: posts,
+          itemsPerPage: 3,
+          pathPrefix: '/posts' ,
+          component: path.resolve('./src/templates/pagination.js')
+        })
         posts.forEach((post, index) => {
           post.node.tags.forEach(tag => allTags.add(tag))
           createPage({
