@@ -38,7 +38,7 @@ exports.createPages = ({ graphql, actions }) => {
           createPage,
           items: posts,
           itemsPerPage: 5,
-          pathPrefix: '/posts' ,
+          pathPrefix: '/blog' ,
           component: path.resolve('./src/templates/pagination.js')
         })
         posts.forEach((post, index) => {
