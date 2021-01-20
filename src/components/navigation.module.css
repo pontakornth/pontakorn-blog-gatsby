@@ -16,3 +16,8 @@
 .navigationItem a {
   color: currentColor;
 }
+
+.webring {
+  width: 32px;
+  height: 32px;
+}
