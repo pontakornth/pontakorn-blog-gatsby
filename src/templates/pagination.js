@@ -30,8 +30,8 @@ class BlogIndex extends React.Component {
               })}
             </ul>
             <div className="flex justify-between">
-              {previousPagePath ? <Link to={previousPagePath}>ก่อนหน้า</Link> : <div className="w-2"></div>}
-              {nextPagePath ? <Link to={nextPagePath}>ถัดไป</Link>: <div className="w-3"></div>}
+              {previousPagePath ? <Link className="button" to={previousPagePath}>ก่อนหน้า</Link> : <div className="w-2"></div>}
+              {nextPagePath ? <Link className="button" to={nextPagePath}>ถัดไป</Link>: <div className="w-3"></div>}
             </div>
           </div>
         </div>
