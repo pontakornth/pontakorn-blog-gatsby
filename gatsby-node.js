@@ -37,7 +37,7 @@ exports.createPages = ({ graphql, actions }) => {
         pagination.paginate({
           createPage,
           items: posts,
-          itemsPerPage: 5,
+          itemsPerPage: 6,
           pathPrefix: '/blog' ,
           component: path.resolve('./src/templates/pagination.js')
         })

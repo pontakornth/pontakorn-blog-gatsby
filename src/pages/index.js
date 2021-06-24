@@ -5,6 +5,7 @@ import Hero from '../components/hero'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 import SEO from '../components/seo'
+import { Link } from "gatsby"
 
 class RootIndex extends React.Component {
   render() {
@@ -30,6 +31,9 @@ class RootIndex extends React.Component {
                 )
               })}
             </ul>
+            <div className="flex justify-end flex-row">
+              <Link to="/blog/2" className="button">Next</Link>
+            </div>
           </div>
         </div>
       </Layout>
@@ -70,7 +74,8 @@ export const pageQuery = graphql`
         siteUrl
       }
     }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC}, limit: 6
+     ) {
       edges {
         node {
           title
