@@ -12,7 +12,7 @@ class BlogIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    const tag = get(this, 'props.tag' )
+    const tag = get(this, 'props.pageContext.tag' )
 
     return (
       <Layout location={this.props.location}>
@@ -20,7 +20,7 @@ class BlogIndex extends React.Component {
           <SEO />
           <div className={styles.hero}>Tag</div>
           <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
+            <h2 className="section-headline">Tag: {tag}</h2>
             <ul className="article-list">
               {posts.map(({ node }) => {
                 return (
