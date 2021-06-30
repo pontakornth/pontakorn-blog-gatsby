@@ -16,9 +16,8 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
+        <div>
           <SEO />
-          <div className={styles.hero}>Tag</div>
           <div className="wrapper">
             <h2 className="section-headline">Tag: {tag}</h2>
             <ul className="article-list">

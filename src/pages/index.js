@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
-import Hero from '../components/hero'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 import SEO from '../components/seo'
@@ -17,11 +16,10 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
+        <div>
           <SEO title={siteTitle} image={coverImage.node} />
-          <Hero data={coverImage} />
           <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
+            <h2 className="section-headline">{siteTitle}</h2>
             <ul className="article-list">
               {posts.map(({ node }) => {
                 return (
