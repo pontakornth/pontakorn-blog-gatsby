@@ -23,6 +23,13 @@
   h1, h2 {
     @apply text-3xl;
   }
+
+  a {
+    @apply text-blue-500 underline;
+    &:visited,&:hover {
+      @apply text-indigo-600;
+    }
+  }
   
 }
 
