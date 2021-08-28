@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Mitr:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@400;700&family=IBM+Plex+Sans+Thai:wght@400;700&display=swap');
 
 /* purgecss start ignore */
 body {
   @apply bg-gray-100 m-0;
-  font-family: "Chakra Petch", Helvetica, sans-serif;
+  font-family: "IBM Plex Sans Thai Looped", Helvetica, sans-serif;
   line-height: 1.65;
   color: #373F49;
   /* @apply dark:bg-gray-800; */
@@ -17,7 +17,7 @@ h1,
 h2,
 h3 {
   @apply text-lg font-semibold;
-  font-family: "Mitr", Helvetica, sans-serif;
+  font-family: "IBM Plex Sans Thai", Helvetica, sans-serif;
 }
 
 a {
