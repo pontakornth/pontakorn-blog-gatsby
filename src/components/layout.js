@@ -5,6 +5,7 @@ import '../assets/prism-theme.css'
 import './base.css'
 import Container from './container'
 import Navigation from './navigation'
+import Navbar from './Navbar'
 
 class Template extends React.Component {
   render() {
@@ -17,10 +18,13 @@ class Template extends React.Component {
     }
 
     return (
+      <>
+        <Navbar />
       <Container>
         <Navigation />
         {children}
       </Container>
+      </>
     )
   }
 }

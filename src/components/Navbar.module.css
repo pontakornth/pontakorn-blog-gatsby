@@ -1,0 +1,7 @@
+.navbar {
+  @apply flex justify-end flex-row bg-primary text-white p-4;
+}
+
+.navbarMenu {
+  @apply ml-auto px-4 border-blue-600 border;
+}
