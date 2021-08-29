@@ -12,15 +12,25 @@
 }
 
 /* TODO: Make this the active state */
+.navbarItems.active {
+  @apply block fixed top-0 right-0 bottom-0 w-3/4;
+}
+
 .navbarItems {
-  @apply fixed top-0 right-0 bottom-0 w-3/4 bg-white text-primary p-0 shadow-lg;
+  @apply hidden bg-white text-primary p-0 shadow-lg;
   z-index: 1000;
 }
 
 .overlay {
-  @apply fixed top-0 right-0 bottom-0 bg-gray-700 bg-opacity-80 h-full w-full;
+  @apply hidden;
+}
+
+.overlay.active {
+  @apply block fixed top-0 right-0 bottom-0 bg-gray-700 bg-opacity-80 h-full w-full;
   z-index: 998;
 }
+
+.active {}
 
 .navbarItem  {
   @apply p-4 hover:bg-gray-100 text-right border-primary border-b flex;
@@ -31,7 +41,7 @@
 }
 
 @screen md {
-  .navbarItems {
+  .navbarItems, .navbarItems.active {
     @apply flex flex-row list-none py-0 static bg-transparent text-white w-auto shadow-none;
   }
 
@@ -45,6 +55,9 @@
   }
 
   .overlay {
+    &.active {
+      @apply hidden;
+    }
     @apply hidden;
   }
 
