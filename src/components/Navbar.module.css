@@ -11,8 +11,15 @@
   @apply ml-auto px-4 border-blue-600 border;
 }
 
+/* TODO: Make this the active state */
 .navbarItems {
   @apply fixed top-0 right-0 bottom-0 w-3/4 bg-white text-primary p-0 shadow-lg;
+  z-index: 1000;
+}
+
+.overlay {
+  @apply fixed top-0 right-0 bottom-0 bg-gray-700 bg-opacity-80 h-full w-full;
+  z-index: 998;
 }
 
 .navbarItem  {
@@ -35,6 +42,10 @@
   .navbarItems a {
     /* Note: This is for PC. */
     @apply p-4 hover:bg-blue-300 h-full flex-1 ;
+  }
+
+  .overlay {
+    @apply hidden;
   }
 
 }

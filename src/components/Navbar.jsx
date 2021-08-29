@@ -17,6 +17,8 @@ const Navbar = (props) => {
 			 </li>
 			 )}
 			</ul>
+			<div className={styles.overlay}>
+			</div>
 		</div>
 	)
 }
