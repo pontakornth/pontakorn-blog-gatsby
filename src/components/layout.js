@@ -19,7 +19,21 @@ class Template extends React.Component {
 
     return (
       <>
-        <Navbar />
+        <Navbar items={[
+          {
+            name: "Home",
+            link: '/'
+          },
+          {
+            name: "Posts",
+            link: '/blog'
+          },
+          {
+            name: "About",
+            link: "/about"
+          }
+
+        ]} />
       <Container>
         <Navigation />
         {children}
