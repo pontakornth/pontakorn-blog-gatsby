@@ -12,20 +12,24 @@
 }
 
 .navbarItems {
-  @apply fixed top-0 right-0 bottom-0 w-80 bg-white text-primary p-0;
+  @apply fixed top-0 right-0 bottom-0 w-3/4 bg-white text-primary p-0 shadow-lg;
 }
 
-.navbarItem {
-  @apply p-4 hover:bg-gray-100 text-right border-primary border-b;
+.navbarItem  {
+  @apply p-4 hover:bg-gray-100 text-right border-primary border-b flex;
+}
+
+.navbarItem a {
+  @apply flex-1;
 }
 
 @screen md {
   .navbarItems {
-    @apply flex flex-row list-none py-0;
+    @apply flex flex-row list-none py-0 static bg-transparent text-white w-auto shadow-none;
   }
 
   .navbarItem {
-    @apply flex;
+    @apply flex p-0;
   }
 
   .navbarItems a {
