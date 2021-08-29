@@ -12,17 +12,25 @@
 }
 
 .navbarItems {
-  @apply hidden md:flex flex-row list-none py-0;
+  @apply fixed top-0 right-0 bottom-0 w-80 bg-white text-primary p-0;
+}
+
+.navbarItem {
+  @apply p-4 hover:bg-gray-100 text-right border-primary border-b;
 }
 
 @screen md {
-.navbarItem {
-  @apply flex;
-}
+  .navbarItems {
+    @apply flex flex-row list-none py-0;
+  }
 
-.navbarItems a {
-  /* Note: This is for PC. */
-  @apply p-4 hover:bg-blue-300 h-full flex-1 ;
-}
+  .navbarItem {
+    @apply flex;
+  }
+
+  .navbarItems a {
+    /* Note: This is for PC. */
+    @apply p-4 hover:bg-blue-300 h-full flex-1 ;
+  }
 
 }
