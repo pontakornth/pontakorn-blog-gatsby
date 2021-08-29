@@ -12,9 +12,10 @@
 }
 
 .navbarItems {
-  @apply hidden lg:flex flex-row list-none py-0;
+  @apply hidden md:flex flex-row list-none py-0;
 }
 
+@screen md {
 .navbarItem {
   @apply flex;
 }
@@ -22,4 +23,6 @@
 .navbarItems a {
   /* Note: This is for PC. */
   @apply p-4 hover:bg-blue-300 h-full flex-1 ;
+}
+
 }
