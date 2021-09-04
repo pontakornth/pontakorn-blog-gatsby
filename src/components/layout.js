@@ -35,7 +35,7 @@ class Template extends React.Component {
 
         ]} />
       <Container>
-        <Navigation />
+        {/* TODO: Put webring */}
         {children}
       </Container>
       </>
