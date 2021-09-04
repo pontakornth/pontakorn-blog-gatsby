@@ -25,7 +25,7 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Pontakorn Blog',
+    title: 'Pontakorn',
     siteUrl: 'https://pontakornth.dev'
   },
   pathPrefix: '/gatsby-contentful-starter',
