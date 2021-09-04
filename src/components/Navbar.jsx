@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './Navbar.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'gatsby' 
 import { useState } from 'react'
 
@@ -18,7 +20,9 @@ const Navbar = (props) => {
 	}
 	return (
 		<div className={styles.navbar}>
-			<button onClick={handleClickNavbar} className={styles.navbarMenu}>X</button>
+			<button onClick={handleClickNavbar} className={styles.navbarMenu}>
+				<FontAwesomeIcon icon={faBars} />
+			</button>
 			<ul className={[styles.navbarItems, active && styles.active].join(' ')}>
 			{items.map((item, index) =>
 			 <li className={styles.navbarItem} key={index}>

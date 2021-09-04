@@ -8,7 +8,7 @@
 }
 
 .navbarMenu {
-  @apply block md:hidden ml-auto px-4 border-blue-600 border;
+  @apply block md:hidden ml-auto px-4 ;
 }
 
 /* TODO: Make this the active state */
