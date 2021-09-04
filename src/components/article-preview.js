@@ -21,7 +21,7 @@ export default ({ article }) => (
       {article.tags &&
         article.tags.map(tag => (
           <Link to={`/tags/${tag}`} className={styles.tag} key={tag}>
-            {tag}
+            #{tag}
           </Link>
         ))}
     </div>
