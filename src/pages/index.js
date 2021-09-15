@@ -72,7 +72,7 @@ export const pageQuery = graphql`
         siteUrl
       }
     }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC}, limit: 6
+    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC}, limit: 4
      ) {
       edges {
         node {
